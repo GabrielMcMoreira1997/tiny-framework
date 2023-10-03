@@ -1,0 +1,11 @@
+
+    {
+        "name": "vendor/tiny",
+        "description": "An simple framework for PHP.",
+        "version": "1.0.0",
+        "require": {
+            "php": "^7.4",
+            "twig/twig": "^3.0"
+        }
+    }
+

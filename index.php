@@ -1,6 +1,8 @@
 <?php
 session_start();
+
 require 'config.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 spl_autoload_register(function($class){
     if (file_exists('modules/' . $class . '/' . $class . '.php')) {
