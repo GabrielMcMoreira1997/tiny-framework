@@ -1,6 +1,5 @@
 <?php
 $this->get('', function($params){
-    echo "HOME";
+    $tpl = $this->core->loadModule('template');
+    echo $tpl->render('welcome.twig', ['nome' => 'João',]);
 });
-
-$this->loadRouteFile('noticias');
