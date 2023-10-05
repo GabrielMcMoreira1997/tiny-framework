@@ -33,7 +33,7 @@ $this->get('news', function($params){
 
     $sql = $db->query('SELECT * FROM news');
     $array = $sql->fetchAll();
-    $tpl->render('news');
+    echo $tpl->render('news.twig', ['news' => $array]);
 });
 ```
 #### Database config
@@ -70,7 +70,9 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 ## Built with 
 
-- [PHP](https://www.php.net/) Only PHP, so far.
+- [PHP](https://www.php.net/) - Only PHP, so far.
+- [Twig]([https://www.php.net/](https://twig.symfony.com/)) - Template Engine.
+- [iziToast](https://izitoast.marcelodolza.com) - Notifications/Alerts.
 
 
 ## To-do (Improves)
