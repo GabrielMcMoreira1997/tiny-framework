@@ -71,7 +71,7 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 ## Built with 
 
 - [PHP](https://www.php.net/) - Only PHP, so far.
-- [Twig]([https://www.php.net/](https://twig.symfony.com/)) - Template Engine.
+- [Twig](https://twig.symfony.com/) - Template Engine.
 - [iziToast](https://izitoast.marcelodolza.com) - Notifications/Alerts.
 
 
