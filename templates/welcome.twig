@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./utils/iziToast/dist/js/iziToast.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="./utils/iziToast/dist/css/iziToast.min.css">
 </head>
 
 <body>
@@ -30,5 +32,17 @@
     </div>
   </div>
 </body>
+<script>
+  const email = document.querySelector('#emailField');
+  document.addEventListener('keydown', (e) => {
+    if (e.code === "Enter" && email.value !== ''){
+      iziToast.show({
+        message: 'Thanks for subscribe!',
+        position: 'topRight',
+        color: 'green'
+      });
+    }
 
+});
+</script>
 </html>
