@@ -16,10 +16,10 @@ namespace Twig;
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
-class Markup implements \Countable, \JsonSerializable
+class Markup implements \Countable, \JsonSerializable, \Stringable
 {
     private $content;
-    private $charset;
+    private ?string $charset;
 
     public function __construct($content, $charset)
     {
@@ -32,11 +32,19 @@ class Markup implements \Countable, \JsonSerializable
         return $this->content;
     }
 
+    /**
+     * @return int
+     */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return mb_strlen($this->content, $this->charset);
     }
 
+    /**
+     * @return mixed
+     */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         return $this->content;
